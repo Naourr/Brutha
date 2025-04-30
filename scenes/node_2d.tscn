@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=3 uid="uid://dvh3e2ogw3vp6"]
+
+[ext_resource type="Texture2D" uid="uid://dnjsmpd3p62op" path="res://assets/wp11831807-berserk-skeleton-wallpapers.png" id="1_4dvvg"]
+[ext_resource type="PackedScene" uid="uid://dyemk0kb3agt2" path="res://scenes/skelly.tscn" id="2_rnjyy"]
+[ext_resource type="PackedScene" uid="uid://drmarckqb8kkp" path="res://scenes/dialogue_ui.tscn" id="3_rnjyy"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_4dvvg")
+expand_mode = 2
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer2"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Skelly" parent="CanvasLayer2/Control" instance=ExtResource("2_rnjyy")]
+position = Vector2(0, 30)
+scale = Vector2(0.4, 0.4)
+
+[node name="DialogueUI" parent="CanvasLayer2" instance=ExtResource("3_rnjyy")]

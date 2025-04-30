@@ -1,0 +1,58 @@
+[gd_scene load_steps=10 format=3 uid="uid://dyemk0kb3agt2"]
+
+[ext_resource type="Texture2D" uid="uid://d3ucnfh8ny7jv" path="res://assets/skull/sprite_4.png" id="1_df2o8"]
+[ext_resource type="Texture2D" uid="uid://bj46ieod7mslk" path="res://assets/skull/sprite_0.png" id="2_spe35"]
+[ext_resource type="Texture2D" uid="uid://c1auk0ehutfx0" path="res://assets/skull/sprite_1.png" id="3_0ht1c"]
+[ext_resource type="Texture2D" uid="uid://b3i6pj1yp7836" path="res://assets/skull/sprite_2.png" id="4_et37e"]
+[ext_resource type="Texture2D" uid="uid://cu8rjrnp6s6r3" path="res://assets/skull/sprite_3.png" id="5_omw27"]
+[ext_resource type="Texture2D" uid="uid://dd2qcke3x0ot3" path="res://assets/skull/sprite_5.png" id="6_yqv1l"]
+[ext_resource type="Texture2D" uid="uid://bg4ss2dc5txpv" path="res://assets/skull/sprite_6.png" id="7_8i8u6"]
+[ext_resource type="Texture2D" uid="uid://d2vbf1571hgpm" path="res://assets/skull/sprite_7.png" id="8_5ievb"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_b1w0x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_df2o8")
+}],
+"loop": false,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_spe35")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_0ht1c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_et37e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_omw27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_df2o8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_yqv1l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_8i8u6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_5ievb")
+}],
+"loop": true,
+"name": &"talking",
+"speed": 10.0
+}]
+
+[node name="Skelly" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_b1w0x")
+animation = &"talking"
+autoplay = "talking"
+frame_progress = 0.954251
